@@ -4,7 +4,7 @@ from human import Human
 class Game:
     def __init__(self):
         self.ai = AI('ai')
-        self.human = Human 
+        self.human = Human('Human') 
 
     def run_game(self):
         self.display_rules()
@@ -27,9 +27,31 @@ class Game:
         print('Paper disproves Spock')
         print('Spock vaporizes Rock')
         print('Rock crushes Scissors')
-        players = input("How many players will be playing, 1 or 2? ")
+
+    def game_one(self):
+        self.ai.choose_gesture()
+        self.human.choose_gesture()  
+
+
+    def game_two(self):
+        self.human.choose_gesture()  
+        self.ai.choose_gesture()
+        
+ 
 
     def play_game(self):
-       self.ai.choose_gesture()
+        players_input = input("How many players will be playing, 1 or 2? ")
+        if players_input == 1:
+            self.game_one()
+        else: 
+            self.game_two()
+
+
+
+
+
+
+
+    #    self.ai.choose_gesture()
 
 
