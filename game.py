@@ -3,7 +3,8 @@ from human import Human
 
 class Game:
     def __init__(self):
-        pass
+        self.ai = AI('ai')
+        self.human = Human 
 
     def run_game(self):
         self.display_rules()
@@ -20,15 +21,15 @@ class Game:
         print('Paper covers Rock')
         print('Rock crushes Lizard')
         print('Lizard poisons Spock')
-        print('Spock smases Scissors')
+        print('Spock smashes Scissors')
         print('Scissors decapitates Lizard')
         print('Lizard eats Paper')
         print('Paper disproves Spock')
         print('Spock vaporizes Rock')
         print('Rock crushes Scissors')
-        
+        players = input("How many players will be playing, 1 or 2? ")
 
     def play_game(self):
-        players = input("How many players will be playing, 1 or 2? ")
+       self.ai.choose_gesture()
 
 
