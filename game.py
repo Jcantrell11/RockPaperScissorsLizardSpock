@@ -1,4 +1,5 @@
-
+from ai import AI
+from human import Human 
 
 class Game:
     def __init__(self):
@@ -6,6 +7,7 @@ class Game:
 
     def run_game(self):
         self.display_rules()
+        self.play_game()
 
     def display_rules(self):
         print('Welcome to Rock Paper Scissors Lizard Spock. As seen on the Big Bang Theory!')
@@ -24,7 +26,9 @@ class Game:
         print('Paper disproves Spock')
         print('Spock vaporizes Rock')
         print('Rock crushes Scissors')
+        
 
     def play_game(self):
-        pass
+        players = input("How many players will be playing, 1 or 2? ")
+
 
