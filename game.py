@@ -3,8 +3,8 @@ from human import Human
 
 class Game:
     def __init__(self):
-        self.ai = AI('ai')
-        self.human = Human('Human') 
+        self.player_one = ""
+        self.player_two = ""
 
     def run_game(self):
         self.display_rules()
@@ -27,23 +27,25 @@ class Game:
         print('Paper disproves Spock')
         print('Spock vaporizes Rock')
         print('Rock crushes Scissors')
+        print("")
 
     def game_one(self):
-        self.ai.choose_gesture()
-        self.human.choose_gesture()  
+        self.player_one = Human("Player One")  
+        self.player_two = AI("Player Two")
+        
 
 
     def game_two(self):
-        self.human.choose_gesture()  
-        self.ai.choose_gesture()
+        self.player_one = Human("Player One")  
+        self.player_two = Human("Player Two")
         
  
 
     def play_game(self):
         players_input = input("How many players will be playing, 1 or 2? ")
-        if players_input == 1:
+        if players_input == "1":
             self.game_one()
-        else: 
+        else:
             self.game_two()
 
 
@@ -52,6 +54,6 @@ class Game:
 
 
 
-    #    self.ai.choose_gesture()
+    
 
 
