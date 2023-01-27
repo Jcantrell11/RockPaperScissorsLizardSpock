@@ -24,6 +24,7 @@ class Human(Player):
         print("")        
         print(f"{self.name} has picked {self.gesture_list[self.chosen_gesture]}")
 
+        
     
 
 
